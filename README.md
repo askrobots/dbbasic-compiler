@@ -10,7 +10,7 @@ For 70 years, compilers have been mechanical syntax checkers. Now there's one th
 
 **1. Install:**
 ```bash
-pip install -r requirements.txt
+pip install dbbasic-compiler
 ```
 
 **2. Set your API key:**
@@ -30,17 +30,15 @@ Create a simple calculator program.
 - Loop until user types "quit"
 ```
 
-**4. Compile:**
+**4. Compile and run:**
 ```bash
-python ai_compiler.py compile intent/calculator.intent.md
-```
-
-**5. Run:**
-```bash
-python ai_compiler.py run calculator.intent
+dbbasic-compile calculator.intent.md
+dbbasic-compile run calculator
 ```
 
 **That's it.** No code written. Just intent compiled to execution.
+
+Use it anywhere like `gcc` or `python` - it's globally installed.
 
 ## What Is This?
 
@@ -61,7 +59,7 @@ program.c:42:5: error: expected ';' before 'return'
 
 ### DBBasic-Compiler:
 ```bash
-$ python ai_compiler.py compile intent/myapp.intent.md
+$ dbbasic-compile myapp.intent.md
 [AI Compiler] Understanding problem description...
 [AI Compiler] ✓ Compilation successful!
 ```
@@ -86,8 +84,8 @@ Create a simple program that greets users.
 
 **Compile and run:**
 ```bash
-python ai_compiler.py compile intent/hello_world.intent.md
-python ai_compiler.py run hello_world.intent
+dbbasic-compile hello_world.intent.md
+dbbasic-compile run hello_world
 ```
 
 **Output:**
@@ -121,13 +119,13 @@ Runs!
 
 ```bash
 # Compile an intent file
-python ai_compiler.py compile intent/<name>.intent.md
+dbbasic-compile <name>.intent.md
 
 # Run a compiled program
-python ai_compiler.py run <name>.intent
+dbbasic-compile run <name>
 
 # List all compiled programs
-python ai_compiler.py list
+dbbasic-compile list
 ```
 
 ## Philosophy
@@ -192,9 +190,15 @@ Get your API key: https://console.anthropic.com/
 ## Installation
 
 ```bash
-pip install -r requirements.txt
+pip install dbbasic-compiler
 export ANTHROPIC_API_KEY='your-api-key'
 ```
+
+Get your API key: https://console.anthropic.com/
+
+## PyPI Package
+
+Available on PyPI: https://pypi.org/project/dbbasic-compiler/
 
 ## Contributing
 
